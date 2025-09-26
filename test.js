@@ -1,15 +1,20 @@
 // ===== Smooth Scroll for Nav Links =====
 document.querySelectorAll('nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
-  
-      if (targetSection) {
-        window.scrollTo({
-          top: targetSection.offsetTop - 60,
-          behavior: "smooth"
-        });
+      const href = this.getAttribute('href');
+      
+      // only smooth scroll for internal links starting with #
+      if (href.startsWith("#")) {
+        e.preventDefault();
+        const targetId = href.substring(1);
+        const targetSection = document.getElementById(targetId);
+    
+        if (targetSection) {
+          window.scrollTo({
+            top: targetSection.offsetTop - 60,
+            behavior: "smooth"
+          });
+        }
       }
     });
   });
@@ -32,31 +37,16 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll();
   
-  // ===== Contact Form Submission (with EmailJS) =====
-  const contactForm = document.getElementById("contact-form");
+  // ===== Contact Form Submission =====
+  const contactForm = document.querySelector("form");
   
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
-  
-      // --- EmailJS Integration ---
-      emailjs.sendForm("service_jheqmui", "template_ewvj928", contactForm)
-        .then(() => {
-          alert("✅ Message sent successfully!");
-          contactForm.reset();
-        })
-        .catch((error) => {
-          console.error("EmailJS Error:", error);
-          alert("❌ Failed to send message. Please try again later.");
-        });
+      alert("✅ Thank you! Your message has been sent (demo only).");
+      contactForm.reset();
     });
   }
-  
-  // ===== Initialize EmailJS =====
-  // Replace with your actual PUBLIC_KEY from EmailJS dashboard
-  (function() {
-    emailjs.init("YOUR_PUBLIC_KEY");
-  })();
   
   // ===== Back to Top Button =====
   const backToTop = document.createElement("button");
@@ -88,4 +78,22 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
   backToTop.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  // Initialize EmailJS
+  (function() {
+    emailjs.init("service_jheqmui"); // from EmailJS dashboard
+  })();
   
+  if (contactForm) {
+    contactForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+  
+      emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+        .then(() => {
+          alert("✅ Message sent successfully!");
+          contactForm.reset();
+        }, (error) => {
+          alert("❌ Failed to send message: " + error.text);
+        });
+    });
+  }
