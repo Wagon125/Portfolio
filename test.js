@@ -81,14 +81,14 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
 
   // Initialize EmailJS
   (function() {
-    emailjs.init("service_jheqmui"); // from EmailJS dashboard
+    emailjs.init("jheqmui"); // from EmailJS dashboard
   })();
   
   if (contactForm) {
     contactForm.addEventListener("submit", function(e) {
       e.preventDefault();
   
-      emailjs.sendForm("service_jheqmui", "template_5lcf69z", this)
+      emailjs.sendForm("jheqmui", "5lcf69z", this)
         .then(() => {
           alert("✅ Message sent successfully!");
           contactForm.reset();
