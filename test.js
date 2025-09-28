@@ -88,7 +88,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     contactForm.addEventListener("submit", function(e) {
       e.preventDefault();
   
-      emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+      emailjs.sendForm("service_jheqmui", "template_5lcf69z", this)
         .then(() => {
           alert("✅ Message sent successfully!");
           contactForm.reset();

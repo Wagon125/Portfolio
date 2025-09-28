@@ -49,6 +49,7 @@
     background: linear-gradient(to right, #5427d1, #18b7fc);
     background-clip: text;
     color: transparent;
+  
  }
 
   /* HERO */
@@ -282,11 +283,15 @@
     text-decoration: none;          /* remove underline */
     border-radius: 6px;             /* rounded corners */
     font-weight: 600;               /* bold text */
-    transition: background 0.3s;  
+    transition: background 0.4s;  
   }
 
   a.btn:hover {
-    background: (#5a3fe0e2, #8475d8e2);      /* darker on hover */
+    background: (180deg #5a3fe0e2, #8475d8e2);      /* darker on hover */
   }
 
-  
+  @media (max-width: 600px){
+    .logo span{
+      padding-right: 20px;
+    }
+  }
