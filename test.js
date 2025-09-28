@@ -79,21 +79,21 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // Initialize EmailJS
-  (function() {
-    emailjs.init("jheqmui"); // from EmailJS dashboard
-  })();
-  
-  if (contactForm) {
-    contactForm.addEventListener("submit", function(e) {
-      e.preventDefault();
-  
-      emailjs.sendForm("jheqmui", "5lcf69z", this)
-        .then(() => {
-          alert("✅ Message sent successfully!");
-          contactForm.reset();
-        }, (error) => {
-          alert("❌ Failed to send message: " + error.text);
-        });
-    });
-  }
+ // Initialize EmailJS
+(function() {
+  emailjs.init("IOIKirpMrCPhCInr6"); // Example: "C0xg7FQn4abc12345"
+})();
+
+if (contactForm) {
+  contactForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_jheqmui", "template_ewvj928", this)
+      .then(() => {
+        alert("✅ Message sent successfully!");
+        contactForm.reset();
+      }, (error) => {
+        alert("❌ Failed to send message: " + error.text);
+      });
+  });
+}
