@@ -55,7 +55,7 @@
   /* HERO */
   .hero {
     background: linear-gradient(rgba(14, 22, 36, 0.85), rgba(14, 22, 36, 0.85)),
-    url("https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    url(" https://plus.unsplash.com/premium_photo-1714618946021-8fbd6394d1a8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHRlY2h8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=400");
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -65,6 +65,7 @@
     text-align: center;
   }
   
+ 
   .hero-content h2 {
     font-size: 60px;
     margin-bottom: 15px;
@@ -105,6 +106,7 @@
   .about {
     text-align: center;
     padding: 80px 10%;
+    background: linear-gradient(160%, #240e0e, #28097875);
   }
   
   .about h2 {
