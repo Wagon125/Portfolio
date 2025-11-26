@@ -59,7 +59,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
   backToTop.style.right = "20px";
   backToTop.style.padding = "10px 14px";
   backToTop.style.fontSize = "20px";
-  backToTop.style.background = "#7c5cff";
+  backToTop.style.background = "yellow";
   backToTop.style.color = "#fff";
   backToTop.style.border = "none";
   backToTop.style.borderRadius = "50%";
@@ -97,3 +97,14 @@ if (contactForm) {
       });
   });
 }
+
+
+// index.js
+const heroAnim = document.querySelector('.hero-animation');
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    if(heroAnim) {
+        heroAnim.style.transform = `translateY(${scrollY * 0.15}px)`;
+    }
+});

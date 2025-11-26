@@ -4,130 +4,142 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wâgòn | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-<script src="index.js" defer></script>
 
+  <!-- Lottie -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <!-- Scroll Animation (AOS) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1 class="logo"><span>Dåniel</span></h1>
+<!-- HERO -->
+<section class="hero">
     <nav>
-     <div class="list">
-        <ul class="block">
+        <h2 class="logo">Daniel<span>.</span></h2>
+        <ul class="menu">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
-          </ul>
-     </div>
+        </ul>
     </nav>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero">
     <div class="hero-content">
-      <h2>Hello, I’m <span>Daniel</span></h2>
-      <p>Frontend Developer | Creative Coder | Product Manager</p>
-      <a href="#projects" class="btn-primary">Explore My Work</a>
+        <div class="text">
+            <h1 data-aos="fade-up" class="born">Frontend Developer</h1>
+            <p data-aos="fade-up" data-aos-delay="200">I build beautiful, fast, interactive websites.</p>
+            <button class="cta" data-aos="fade-up" data-aos-delay="400" onclick="contact">Let's Build</button>
+        </div>
+
+        <div class="hero-animation" data-aos="zoom-in">
+            <lottie-player 
+                src="https://assets10.lottiefiles.com/packages/lf20_0yfsb3a1.json"
+                background="transparent"
+                speed="1"
+                style="width: 400px; height: 400px"
+                loop autoplay>
+            </lottie-player>
+        </div>
     </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      I am a frontend developer passionate about building sleek, responsive, and user-friendly web applications.
-      With hands-on experience in HTML, CSS, and JavaScript, I bring creative ideas to life through code.
-    </p>
-  </section>
+    <!-- Floating bubbles -->
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+</section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <div class="skill-grid">
-      <div class="skill"><h3>HTML</h3><div class="bar"><span style="width: 95%;"></span></div></div>
-      <div class="skill"><h3>CSS</h3><div class="bar"><span style="width: 90%;"></span></div></div>
-      <div class="skill"><h3>JavaScript</h3><div class="bar"><span style="width: 75%;"></span></div></div>
-      <div class="skill"><h3>React (Learning)</h3><div class="bar"><span style="width: 60%;"></span></div></div>
+<!-- ABOUT -->
+<section id="about" class="about">
+  <h2 data-aos="fade-up">About Me</h2>
+  <p data-aos="fade-up" data-aos-delay="200">
+    I’m a passionate frontend developer who creates clean, modern, and highly interactive websites. 
+    I specialize in HTML, CSS, JavaScript, React, animations, and responsive design.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+  <div class="skill-grid">
+    <div class="skill"><h3>HTML</h3><div class="bar"><span style="width: 98%;"></span></div></div>
+    <div class="skill"><h3>CSS</h3><div class="bar"><span style="width: 95%;"></span></div></div>
+    <div class="skill"><h3>JavaScript</h3><div class="bar"><span style="width: 75%;"></span></div></div>
+    <div class="skill"><h3>React (Learning)</h3><div class="bar"><span style="width: 20%;"></span></div></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Project 1">
+      <h3>Portfolio Website</h3>
+      <p>A modern responsive portfolio to showcase my projects and skills.</p>
     </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Project 1">
-        <h3>Portfolio Website</h3>
-        <p>A modern responsive portfolio to showcase my projects and skills.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://images.pexels.com/photos/7667442/pexels-photo-7667442.jpeg?auto=compress&cs=tinysrgb&w=800" alt="E-commerce UI">
-        <h3>E-commerce UI</h3>
-        <p>Frontend design for an online store with product cards and cart system.</p>
-        <a href="https://mobile-mart-beta.vercel.app" class="love">Here is a link</a>
-      </div>
-      
-      
-      <div class="card">
-        <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800"
-             alt="Job Board UI">
-        <h3>Job Board UI</h3>
-        <p>A job listing web app with user authentication and job management features.</p>
-        <a href="https://job-ashy.vercel.app/" class="love">Here is a link</a>
-      </div>
-      
-      
-      <div class="card">
-        <img src="https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sparkling Water Project">
-        <h3>WaterDr💧p</h3>
-        <p>A water production and distribution company with a user-friendly interface and mobile order feature.</p>
-        <a href="https://water-black-ten.vercel.app" class="love">Here is a link</a>
-      </div>
-
-      <div class="card">
-        <img src="https://plus.unsplash.com/premium_photo-1718667362777-ec82e582378a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fG9ubGluZSUyMGRhdGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=400" alt="Mini Match Cute Couple">
-        <h3>MiniMatch 💞</h3>
-        <p>Find someone who matches your vibe — MiniMatch helps you meet real people and build real connections, beautifully and simply.</p>
-        <a href="https://mini-match.vercel.app" class="love">Visit MiniMatch 💕</a>
-      </div>
-      
-      
-
+    <div class="card">
+      <img src="https://images.pexels.com/photos/7667442/pexels-photo-7667442.jpeg?auto=compress&cs=tinysrgb&w=800" alt="E-commerce UI">
+      <h3>E-commerce UI</h3>
+      <p>Frontend design for an online store with product cards and cart system.</p>
+      <a href="https://mobile-mart-beta.vercel.app" class="love">Here is a link</a>
     </div>
-  </section>
 
+    <div class="card">
+      <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800"
+           alt="Job Board UI">
+      <h3>Job Board UI</h3>
+      <p>A job listing web app with user authentication and job management features.</p>
+      <a href="https://job-ashy.vercel.app/" class="love">Here is a link</a>
+    </div>
 
+    <div class="card">
+      <img src="https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sparkling Water Project">
+      <h3>WaterDr💧p</h3>
+      <p>A water production and distribution company with a user-friendly interface and mobile order feature.</p>
+      <a href="https://water-black-ten.vercel.app" class="love">Here is a link</a>
+    </div>
 
-  <!-- CONTACT -->
+    <div class="card">
+      <img src="https://plus.unsplash.com/premium_photo-1718667362777-ec82e582378a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fG9ubGluZSUyMGRhdGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=400" alt="Mini Match Cute Couple">
+      <h3>MiniMatch 💞</h3>
+      <p>Find someone who matches your vibe — MiniMatch helps you meet real people and build real connections, beautifully and simply.</p>
+      <a href="https://mini-match.vercel.app" class="love">Visit MiniMatch 💕</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>Have a project or want to collaborate? Let’s talk!</p>
-    <form id="contactForm">
-        <input type="text" name="user_name" placeholder="Your Name" required>
-        <input type="email" name="user_email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn-primary">Send</button>
-      </form>
-      
-  </section>
-  
+  <h2>Contact Me</h2>
+  <p>Have a project or want to collaborate? Let’s talk!</p>
+  <form id="contactForm">
+      <input type="text" name="user_name" placeholder="Your Name" required>
+      <input type="email" name="user_email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn-primary">Send</button>
+  </form>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Wâgøn | Built with ❤️ using HTML, CSS, & JavaScript</p>
-    <div class="socials">
-     
-      <a href="https://www.linkedin.com/in/austin-daniel-84391b311/">LinkedIn</a> |
-      <a href="https://github.com/Wagon125">GitHub</a> |
-      <a href="">+234 08023792400</a> |
-      <a href="https://www.gmail.com.">valeraindaniel@gmail.com</a> |
-    </div>
-  </footer>
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Wâgòn | Built with ❤️ using HTML ∆ CSS ∆ JavaScript</p>
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/austin-daniel-84391b311/">LinkedIn</a> |
+    <a href="https://github.com/Wagon125">GitHub</a> |
+    <a href="phone">+234 08023792400</a> |
+    <a href="https://www.gmail.com.">valeraindaniel@gmail.com</a>
+  </div>
+</footer>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
