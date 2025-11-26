@@ -355,99 +355,101 @@ nav {
   }
 
   
- /* ===== HERO MOBILE (ROW LAYOUT) ===== */
+ /* ===== HERO MOBILE CLEAN FIX ===== */
 @media (max-width: 768px) {
+
+  /* HERO */
   .hero {
-      height: auto;              /* let it grow naturally */
-      padding: 20px 5%;
+      height: auto;
+      padding: 40px 6%;
   }
 
   .hero-content {
-      flex-direction: row;        /* keep text + animation side by side */
-      justify-content: space-between;
+      flex-direction: column;     /* Stack text + animation */
+      justify-content: center;
       align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;            /* allow wrapping on very small screens */
+      text-align: center;
+      gap: 25px;
   }
 
   .text {
-      flex: 1 1 45%;             /* take ~45% width */
-      text-align: left;
-      padding: 0;
+      width: 100%;
+      text-align: center;
   }
 
   .text h1 {
-      font-size: 32px;
+      font-size: 38px;
       line-height: 1.2;
-      transform: rotate(0deg);   /* remove tilt for clarity */
+      transform: rotate(0deg);    /* Remove tilt on mobile */
   }
 
   .text h1::after {
-      width: 80px;
-      margin-top: 8px;
+      width: 90px;
+      margin: 10px auto 0 auto;
   }
 
   .text p {
-      font-size: 14px;
-      margin-top: 8px;
-      max-width: 100%;
+      font-size: 15px;
+      max-width: 90%;
+      margin: 15px auto 0 auto;
   }
 
   .cta {
-      padding: 8px 20px;
-      font-size: 14px;
+      padding: 10px 26px;
+      font-size: 15px;
+      margin-top: 20px;
   }
 
   .hero-animation {
-      flex: 1 1 50%;             /* take ~50% width */
-      max-width: 250px;
-      max-height: 250px;
+      width: 100%;
+      max-width: 280px;
+      max-height: 280px;
   }
 
-  /* Keep navbar horizontal */
+  /* NAV stays in one line but spaced */
   nav {
-      flex-direction: row;
+      padding: 10px 0;
+      display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 10px;
   }
 
   .menu {
+      display: flex;
       flex-direction: row;
-      gap: 15px;
+      gap: 12px;
   }
 
-  /* Adjust bubbles to avoid overlapping animation */
+  /* BUBBLES SHRINK */
   .bubble {
-      transform: scale(0.5);
+      transform: scale(0.4);
+      opacity: 0.5;
   }
-  .b1 { top: 5%; left: 5%; }
-  .b2 { bottom: 10%; left: 20%; }
-  .b3 { top: 45%; right: 5%; }
-  .b4 { bottom: 5%; right: 5%; }
+
+  .b1 { top: 8%; left: 5%; }
+  .b2 { bottom: 12%; left: 18%; }
+  .b3 { top: 55%; right: 8%; }
+  .b4 { bottom: 8%; right: 8%; }
 }
 
 /* ===== SMALL PHONES ===== */
 @media (max-width: 480px) {
-  .hero-content {
-      gap: 10px;
-  }
 
   .text h1 {
-      font-size: 28px;
+      font-size: 32px;
   }
 
   .text p {
-      font-size: 13px;
+      font-size: 13.5px;
   }
 
   .hero-animation {
-      max-width: 180px;
-      max-height: 180px;
+      max-width: 200px;
+      max-height: 200px;
   }
 
   .cta {
-      padding: 6px 16px;
-      font-size: 12px;
+      padding: 8px 18px;
+      font-size: 12.5px;
   }
 }
